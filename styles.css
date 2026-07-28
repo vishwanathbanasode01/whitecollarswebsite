@@ -499,7 +499,7 @@ h2 {
   gap: 3rem;
   align-items: center;
   padding: 0.35rem 0.5rem;
-  animation: marquee 20s linear infinite;
+  animation: marquee 12s linear infinite;
 }
 
 #placements .badge-row .marquee:hover {
@@ -548,7 +548,7 @@ h2 {
 @media (max-width: 980px) {
   #placements .badge-row .marquee {
     gap: 1.1rem;
-    animation-duration: 20s;
+    animation-duration: 12s;
   }
   #placements .badge-row .marquee > span {
     padding: 0.45rem 0.8rem;
@@ -558,8 +558,8 @@ h2 {
 
 @media (max-width: 640px) {
   #placements .badge-row .marquee {
-    gap: 0.9rem;
-    animation-duration: 20s;
+    gap: 0.65rem;
+    animation-duration: 8s;
   }
 
   #placements .badge-row .marquee > .placement-item img.placement-logo {
