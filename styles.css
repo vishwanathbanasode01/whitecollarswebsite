@@ -433,8 +433,8 @@ h2 {
   height: clamp(72px, 8vw, 96px);
   width: auto;
   max-width: min(140px, 22vw);
-  margin-right: 0.8rem;
-  vertical-align: middle;
+  margin: 0;
+  /* vertical-align: middle; */
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -443,7 +443,6 @@ h2 {
   #placements .placement-logo {
     height: clamp(76px, 14vw, 96px);
     max-width: min(120px, 28vw);
-    margin-right: 0.5rem;
   }
 }
 
@@ -495,20 +494,31 @@ h2 {
 }
 
 #placements .badge-row .marquee {
-  display: flex;
-  gap: 3rem;
+  display: inline-flex;
   align-items: center;
+  flex-wrap: nowrap;
+  width: max-content;
   padding: 0.35rem 0.5rem;
-  animation: marquee 12s linear infinite;
+  animation: marquee 16s linear infinite;
+  will-change: transform;
 }
 
 #placements .badge-row .marquee:hover {
   animation-play-state: running;
 }
 
+#placements .badge-row .marquee-track {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 2.4rem;
+  align-items: center;
+  padding: 0.35rem 0.5rem;
+  white-space: nowrap;
+}
+
 /* Make placement items visually minimal (no box/grid) */
 
-#placements .badge-row .marquee > .placement-item {
+#placements .badge-row .marquee-track > .placement-item {
   color: black;
   display: inline-flex;
   flex-direction: column;
@@ -518,7 +528,7 @@ h2 {
   font-size: 0.98rem;
 }
 
-#placements .badge-row .marquee > .placement-item img.placement-logo {
+#placements .badge-row .marquee-track > .placement-item img.placement-logo {
   height: clamp(70px, 9vw, 110px);
   width: auto;
   max-width: min(140px, 22vw);
@@ -528,11 +538,11 @@ h2 {
   padding: 0.4rem;
   flex-shrink: 0;
 }
-#placements .badge-row .marquee > .placement-item {
+#placements .badge-row .marquee-track > .placement-item {
   min-height: auto;
 }
 
-#placements .badge-row .marquee > .placement-item .placement-name {
+#placements .badge-row .marquee-track > .placement-item .placement-name {
   display: none;
 }
 
@@ -547,30 +557,28 @@ h2 {
 
 @media (max-width: 980px) {
   #placements .badge-row .marquee {
-    gap: 1.1rem;
-    animation-duration: 12s;
+    animation-duration: 15s;
   }
-  #placements .badge-row .marquee > span {
-    padding: 0.45rem 0.8rem;
-    font-size: 0.95rem;
+
+  #placements .badge-row .marquee-track {
+    gap: 1.2rem;
   }
 }
 
 @media (max-width: 640px) {
   #placements .badge-row .marquee {
-    gap: 0.65rem;
-    animation-duration: 8s;
+    animation-duration: 11s;
   }
 
-  #placements .badge-row .marquee > .placement-item img.placement-logo {
+  #placements .badge-row .marquee-track {
+    gap: 0.8rem;
+  }
+
+  #placements .badge-row .marquee-track > .placement-item img.placement-logo {
     height: clamp(72px, 14vw, 92px);
     max-width: min(112px, 30vw);
     object-fit: contain;
     padding: 0.25rem;
-  }
-
-  #placements .badge-row .marquee > .placement-item .placement-name {
-    display: none;
   }
 }
 
