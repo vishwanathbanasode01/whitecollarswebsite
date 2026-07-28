@@ -429,17 +429,21 @@ h2 {
 
 /* Placement logos */
 #placements .placement-logo {
-  display: inline-block;
+  display: block;
+  height: clamp(72px, 8vw, 96px);
   width: auto;
-  max-height: 96px;
+  max-width: min(140px, 22vw);
   margin-right: 0.8rem;
   vertical-align: middle;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {
   #placements .placement-logo {
-    max-height: 64px;
+    height: clamp(76px, 14vw, 96px);
+    max-width: min(120px, 28vw);
+    margin-right: 0.5rem;
   }
 }
 
@@ -515,13 +519,14 @@ h2 {
 }
 
 #placements .badge-row .marquee > .placement-item img.placement-logo {
-  height: auto;
+  height: clamp(70px, 9vw, 110px);
   width: auto;
-  max-width: 140px;
+  max-width: min(140px, 22vw);
   display: block;
   margin: 0 auto;
   object-fit: contain;
-  padding: 0.85rem;
+  padding: 0.4rem;
+  flex-shrink: 0;
 }
 #placements .badge-row .marquee > .placement-item {
   min-height: auto;
@@ -558,16 +563,14 @@ h2 {
   }
 
   #placements .badge-row .marquee > .placement-item img.placement-logo {
-    height: 88px;
-    width: 88px;
+    height: clamp(72px, 14vw, 92px);
+    max-width: min(112px, 30vw);
     object-fit: contain;
+    padding: 0.25rem;
   }
 
   #placements .badge-row .marquee > .placement-item .placement-name {
     display: none;
-  }
-  #placements .badge-row .marquee > span img.placement-logo {
-    max-height: 34px;
   }
 }
 
