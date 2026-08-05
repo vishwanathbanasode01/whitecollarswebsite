@@ -131,14 +131,14 @@ a {
 }
 
 .nav-links .nav-cta {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: white;
-  box-shadow: 0 12px 24px -12px rgba(37, 99, 235, 0.42);
+  color: black;
+  background: transparent;
+  box-shadow: none;
 }
 
 .nav-links .nav-cta:hover {
-  color: white;
-  background: linear-gradient(135deg, var(--primary-strong), var(--primary));
+  color: black;
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .hero {
@@ -457,9 +457,6 @@ h2 {
     font-size: 0.8rem;
   }
 
-  .nav-links .nav-cta {
-    padding: 0.5rem 0.8rem;
-  }
 
   .logo {
     height: 3rem;
