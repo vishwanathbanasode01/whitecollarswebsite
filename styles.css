@@ -130,6 +130,17 @@ a {
   transform: translateY(-1px);
 }
 
+.nav-links .nav-cta {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  box-shadow: 0 12px 24px -12px rgba(37, 99, 235, 0.42);
+}
+
+.nav-links .nav-cta:hover {
+  color: white;
+  background: linear-gradient(135deg, var(--primary-strong), var(--primary));
+}
+
 .hero {
   padding: clamp(2rem, 5vw, 4rem) 0 clamp(2.5rem, 4vw, 3.5rem);
   position: relative;
@@ -444,6 +455,10 @@ h2 {
   .nav-links a {
     padding: 0.45rem 0.65rem;
     font-size: 0.8rem;
+  }
+
+  .nav-links .nav-cta {
+    padding: 0.5rem 0.8rem;
   }
 
   .logo {
