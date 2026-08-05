@@ -47,8 +47,8 @@ h2,
 h3,
 button,
 a {
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .container {
@@ -390,6 +390,25 @@ h2 {
 
   .hero {
     padding-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .card,
+  .feature-card {
+    padding: 1rem 1rem 1.1rem;
+  }
+
+  .card p,
+  .feature-card p {
+    max-width: 34ch;
+    line-height: 1.55;
   }
 }
 
